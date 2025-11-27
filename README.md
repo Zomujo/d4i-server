@@ -20,12 +20,12 @@ npm run dev
 
 ### Environment
 
-| Variable      | Description                                  |
-| ------------- | -------------------------------------------- |
-| `PORT`        | HTTP port (default 4000)                     |
-| `DATABASE_URL`| Supabase/Postgres connection string          |
-| `JWT_SECRET`  | Secret used to sign user tokens (>=20 chars) |
-| `CORS_ORIGIN` | Optional allowed origin for browsers         |
+| Variable       | Description                                  |
+| -------------- | -------------------------------------------- |
+| `PORT`         | HTTP port (default 4000)                     |
+| `DATABASE_URL` | Supabase/Postgres connection string          |
+| `JWT_SECRET`   | Secret used to sign user tokens (>=20 chars) |
+| `CORS_ORIGIN`  | Optional allowed origin for browsers         |
 
 ## Database schema
 
@@ -46,6 +46,3 @@ Apply the SQL in `sql/schema.sql` (or translate into migrations) to provision th
 - `POST /api/complaints` – submit complaint (auth required)
 - `GET /api/complaints` – list complaints; admins see all
 - `PATCH /api/complaints/:id/status` – admin-only status change
-
-Enhance these handlers with rate limiting, email notifications, or analytics as needed.
-
