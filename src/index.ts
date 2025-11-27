@@ -1,7 +1,7 @@
-import { createServer } from './server';
-import { env } from './config/env';
-import { logger } from './logger';
-import { sql } from './db/client';
+import { createServer } from './server.js';
+import { env } from './config/env.js';
+import { logger } from './logger.js';
+import { sql } from './db/client.js';
 
 async function main() {
   await verifyDatabaseConnection();

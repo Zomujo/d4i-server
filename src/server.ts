@@ -4,10 +4,10 @@ import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { env } from './config/env';
-import { errorHandler } from './middleware/error-handler';
-import { notFoundHandler } from './middleware/not-found';
-import { registerRoutes } from './routes';
+import { env } from './config/env.js';
+import { errorHandler } from './middleware/error-handler.js';
+import { notFoundHandler } from './middleware/not-found.js';
+import { registerRoutes } from './routes/index.js';
 
 export function createServer() {
   const app = express();

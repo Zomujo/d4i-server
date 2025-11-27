@@ -1,8 +1,8 @@
 import { Express } from 'express';
-import { authRouter } from './auth';
-import { complaintsRouter } from './complaints';
-import { healthRouter } from './health';
-import { usersRouter } from './users';
+import { authRouter } from './auth.js';
+import { complaintsRouter } from './complaints.js';
+import { healthRouter } from './health.js';
+import { usersRouter } from './users.js';
 
 export function registerRoutes(app: Express) {
   app.use('/api', healthRouter());

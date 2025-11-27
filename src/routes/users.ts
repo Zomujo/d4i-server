@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { authenticate } from '../middleware/authenticate';
-import { authorize } from '../middleware/authorize';
-import { listAdmins, listNavigators } from '../services/user-service';
+import { authenticate } from '../middleware/authenticate.js';
+import { authorize } from '../middleware/authorize.js';
+import { listAdmins, listNavigators } from '../services/user-service.js';
 
 export function usersRouter() {
   const router = Router();

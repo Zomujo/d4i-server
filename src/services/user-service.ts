@@ -1,5 +1,5 @@
 import createHttpError from 'http-errors';
-import { sql } from '../db/client';
+import { sql } from '../db/client.js';
 
 interface UserRecord {
   id: string;

@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import { authenticate } from '../middleware/authenticate';
-import { authorize } from '../middleware/authorize';
+import { authenticate } from '../middleware/authenticate.js';
+import { authorize } from '../middleware/authorize.js';
 import {
   assignComplaint,
   escalateComplaint,
@@ -10,8 +10,8 @@ import {
   listComplaints,
   submitComplaint,
   updateComplaintStatus
-} from '../services/complaint-service';
-import { ComplaintStatus } from '../types';
+} from '../services/complaint-service.js';
+import { ComplaintStatus } from '../types/index.js';
 
 export function complaintsRouter() {
   const router = Router();

@@ -2,10 +2,10 @@ import createHttpError from 'http-errors';
 import jwt from 'jsonwebtoken';
 import { randomUUID } from 'node:crypto';
 import { z } from 'zod';
-import { env } from '../config/env';
-import { sql } from '../db/client';
-import { hashPassword, verifyPassword } from '../utils/password';
-import { AuthenticatedUser, UserRole } from '../types';
+import { env } from '../config/env.js';
+import { sql } from '../db/client.js';
+import { hashPassword, verifyPassword } from '../utils/password.js';
+import { AuthenticatedUser, UserRole } from '../types/index.js';
 
 const registerSchema = z.object({
   email: z.string().email(),

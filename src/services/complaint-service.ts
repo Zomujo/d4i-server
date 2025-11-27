@@ -1,8 +1,8 @@
 import createHttpError from 'http-errors';
 import { randomUUID } from 'node:crypto';
 import { z } from 'zod';
-import { sql } from '../db/client';
-import { ComplaintStatus, UserRole } from '../types';
+import { sql } from '../db/client.js';
+import { ComplaintStatus, UserRole } from '../types/index.js';
 
 const baseComplaintSchema = z.object({
   title: z.string().min(3),
