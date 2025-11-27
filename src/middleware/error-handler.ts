@@ -11,7 +11,7 @@ export function errorHandler(
   const error =
     err instanceof createHttpError.HttpError
       ? err
-      : createHttpError.internal('Unexpected error occurred', { cause: err });
+      : createHttpError(500, 'Unexpected error occurred', { cause: err });
 
   if (error.status >= 500) {
     logger.error({ err: error }, 'unhandled server error');

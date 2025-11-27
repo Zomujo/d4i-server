@@ -9,6 +9,6 @@ export const sql = postgres(env.DATABASE_URL, {
 export async function withTransaction<T>(
   fn: (trx: Sql) => Promise<T>
 ): Promise<T> {
-  return sql.begin((trx) => fn(trx));
+  return sql.begin((trx) => fn(trx)) as Promise<T>;
 }
 
