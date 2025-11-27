@@ -92,7 +92,8 @@ function isComplaintStatus(value: unknown): value is ComplaintStatus {
     value === 'pending' ||
     value === 'in_progress' ||
     value === 'resolved' ||
-    value === 'rejected'
+    value === 'rejected' ||
+    value === 'escalated'
   );
 }
 
